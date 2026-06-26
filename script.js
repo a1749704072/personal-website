@@ -134,10 +134,7 @@ function renderCourses(filter = "all") {
     courseGrid.innerHTML = selectedCourses
         .map((course) => {
             const categoryClass = course.category.toLowerCase();
-            return `<span class="course-card category-${categoryClass}" data-category="${categoryClass}">
-                <span class="course-title">${course.title}</span>
-                <span class="course-category">${course.category}</span>
-            </span>`;
+            return `<span class="course-card category-${categoryClass}" data-category="${categoryClass}">${course.title}</span>`;
         })
         .join("");
 
