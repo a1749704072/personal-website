@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Wong Jiun Yan - Electrical Engineering student focused on Analog and Mixed-Signal IC Design.">
     <title>Wong Jiun Yan | Analog & Mixed-Signal IC Design</title>
-    <link rel="stylesheet" href="style.css?v=20260626-2">
+    <link rel="stylesheet" href="style.css?v=20260627-2">
 </head>
 <body>
     <header class="site-header">
         <div class="wrap header-inner">
-            <a class="brand" href="#home">Wong Jiun Yan</a>
+            <a class="brand" href="#about">Wong Jiun Yan</a>
             <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
             <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#about">About</a>
                 <a href="#research">Research</a>
-                <a href="#projects">Project</a>
-                <a href="#experience">Work Experience</a>
+                <a href="#project">Project</a>
+                <a href="#work">Work Experience</a>
                 <a href="#coursework">Coursework</a>
                 <a href="#license">License</a>
                 <a href="#resume">Resume</a>
@@ -25,7 +26,7 @@
     </header>
 
     <main id="home" class="wrap page">
-        <section class="intro section">
+        <section class="intro section page-section active" data-page="about">
             <div class="intro-main">
                 <img class="portrait" src="profile-photo.png" alt="Portrait of Wong Jiun Yan">
                 <div class="intro-copy">
@@ -51,7 +52,7 @@
             </div>
         </section>
 
-        <section id="about" class="section about-grid">
+        <section id="about" class="section about-grid page-section active" data-page="about">
             <div>
                 <h2>About</h2>
                 <p>
@@ -80,86 +81,113 @@
             </div>
         </section>
 
-        <section id="research" class="section">
+        <section id="research" class="section page-section" data-page="research">
             <h2>Research</h2>
             <article class="entry">
                 <div class="entry-title">
                     <h3>Isolated Gate Driver Circuit for High-Frequency GaN Power Systems</h3>
-                    <p>Feb. 2026 - Present · Hsinchu, Taiwan</p>
+                    <p>Gate driver architecture · isolation · analog circuit design</p>
                 </div>
                 <ul>
-                    <li>Undergraduate Research Assistant at NTHU Power Electronics & IC Design Laboratory.</li>
-                    <li>Developing isolated gate driver architectures for high-frequency GaN switching systems to improve reliability and efficiency.</li>
-                    <li>Designing primary-side and secondary-side analog blocks, including modulation, rectifier, and protection circuits in Cadence Virtuoso.</li>
-                    <li>Investigating signal and power transfer through micro-transformer structures for galvanic isolation.</li>
+                    <li>Investigating isolated gate driver architectures for high-frequency GaN power systems, with emphasis on reliable signal and power transfer across galvanic isolation.</li>
+                    <li>Studying primary-side and secondary-side circuit blocks, including modulation, rectification, and protection circuits for robust gate-driving operation.</li>
+                    <li>Analyzing micro-transformer based coupling structures for isolated signal and power transmission.</li>
+                    <li>Verifying circuit behavior through schematic-level simulation, transient analysis, and design discussions.</li>
                 </ul>
             </article>
         </section>
 
-        <section id="projects" class="section">
+        <section id="project" class="section page-section" data-page="project">
             <h2>Project</h2>
-            <article class="entry">
-                <div class="entry-title">
-                    <h3>128 x 16 Read-Only Memory (ROM) Macro Design & Layout</h3>
-                    <p>Sep. 2025 - Jan. 2026</p>
-                </div>
-                <ul>
-                    <li>Completed a full custom ROM design flow including 7-to-128 decoder, row driver, and memory cell array.</li>
-                    <li>Achieved reliable 136 MHz operation through HSPICE transient simulation.</li>
-                    <li>Drew full layouts in Synopsys Laker, passed Calibre DRC/LVS, and verified performance through post-layout simulation.</li>
-                </ul>
-            </article>
+            <div class="project-list">
+                <article class="project-card">
+                    <div class="entry-title">
+                        <h3>128 x 16 Read-Only Memory (ROM) Macro Design & Layout</h3>
+                        <p>Sep. 2025 - Jan. 2026</p>
+                    </div>
+                    <ul>
+                        <li>Completed full-custom ROM macro flow including 7-to-128 decoder, row driver, memory array, routing, clock, and power rails.</li>
+                        <li>Verified <strong>136 MHz ROM operation</strong> through HSPICE transient simulation.</li>
+                        <li>Completed physical verification with <strong>Calibre DRC/LVS pass</strong> and post-layout simulation.</li>
+                    </ul>
+                    <figure class="project-figure">
+                        <img src="rom-layout.png" alt="Full-custom 128 x 16 ROM layout screenshot">
+                        <figcaption>Full-custom ROM layout screenshot showing memory array, decoder, routing, clock, and power rails.</figcaption>
+                    </figure>
+                    <div class="project-tags">
+                        <span>Synopsys Laker</span>
+                        <span>HSPICE</span>
+                        <span>Calibre DRC/LVS</span>
+                    </div>
+                </article>
 
-            <article class="entry">
-                <div class="entry-title">
-                    <h3>Two-Stage CMOS Operational Amplifier with Miller Compensation</h3>
-                    <p>Sep. 2025 - Dec. 2025</p>
-                </div>
-                <ul>
-                    <li>Designed a two-stage op-amp with PMOS differential input pair, active load, and Miller compensation.</li>
-                    <li>Achieved 60 dB DC gain, 10.68 MHz unity-gain bandwidth, and 86 degree phase margin under HSPICE simulation.</li>
-                    <li>Optimized transistor sizing and bias conditions for stable closed-loop behavior.</li>
-                </ul>
-            </article>
+                <article class="project-card">
+                    <div class="entry-title">
+                        <h3>Two-Stage CMOS Operational Amplifier with Miller Compensation</h3>
+                        <p>Sep. 2025 - Dec. 2025</p>
+                    </div>
+                    <ul>
+                        <li>Designed a two-stage op-amp with PMOS differential input pair, active load, and Miller compensation.</li>
+                        <li>Achieved <strong>60 dB DC gain</strong>, <strong>10.68 MHz UGB</strong>, and <strong>86 degree phase margin</strong> in HSPICE.</li>
+                        <li>Optimized transistor sizing and bias conditions for stable closed-loop behavior.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Analog IC</span>
+                        <span>HSPICE</span>
+                        <span>Miller Compensation</span>
+                    </div>
+                </article>
 
-            <article class="entry">
-                <div class="entry-title">
-                    <h3>NTHU COPILOT: Agent-Based Course Planning Assistant</h3>
-                    <p>Mar. 2026 - May 2026</p>
-                </div>
-                <ul>
-                    <li>Built an interactive AI planner using Python and Streamlit.</li>
-                    <li>Integrated LLM workflows with deterministic validation to reduce hallucinated schedules and graduation-rule errors.</li>
-                    <li>Generated optimized, conflict-free course plans from natural-language prompts.</li>
-                </ul>
-            </article>
+                <article class="project-card">
+                    <div class="entry-title">
+                        <h3>FPGA-Based Tic-Tac-Toe Game</h3>
+                        <p>Feb. 2024 - Jun. 2024</p>
+                    </div>
+                    <ul>
+                        <li>Built a VGA-based Tic-Tac-Toe game on the Basys 3 FPGA using Verilog.</li>
+                        <li>Designed an <strong>FSM-based game controller</strong> supporting single-player and two-player modes.</li>
+                        <li>Integrated <strong>PS/2 keyboard interface</strong>, DIP-switch mode selection, seven-segment score display, and <strong>480p VGA output</strong>.</li>
+                        <li>Added illegal-move detection, visual feedback, and input lockout for reliable gameplay.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Verilog</span>
+                        <span>FPGA</span>
+                        <span>VGA Output</span>
+                        <span>PS/2 Keyboard</span>
+                    </div>
+                </article>
 
-            <article class="entry">
-                <div class="entry-title">
-                    <h3>FPGA-Based Tic-Tac-Toe Game</h3>
-                    <p>Feb. 2024 - Jun. 2024</p>
-                </div>
-                <ul>
-                    <li>Built a VGA-based Tic-Tac-Toe game on the Basys 3 FPGA using Verilog, supporting both single-player and two-player modes with keyboard control and real-time score display.</li>
-                    <li>Designed the system around an FSM-based game controller, with mode selection via DIP switches and scores shown on a seven-segment display.</li>
-                    <li>Integrated a PS/2 keyboard interface for cursor movement and piece placement, and implemented 480p VGA output using Xilinx Clocking Wizard.</li>
-                    <li>Added illegal-move detection, visual feedback, and input lockout to prevent repeated invalid inputs.</li>
-                </ul>
-            </article>
+                <article class="project-card">
+                    <div class="entry-title">
+                        <h3>NTHU COPILOT: Agent-Based Course Planning Assistant</h3>
+                        <p>Mar. 2026 - May 2026</p>
+                    </div>
+                    <ul>
+                        <li>Built an interactive AI planner using Python and Streamlit.</li>
+                        <li>Integrated LLM workflows with deterministic validation to reduce hallucinated schedules and graduation-rule errors.</li>
+                        <li>Generated optimized, conflict-free course plans from natural-language prompts.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>LLM Workflow</span>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section id="experience" class="section">
+        <section id="work" class="section page-section" data-page="work">
             <h2>Work Experience</h2>
             <article class="entry">
                 <div class="entry-title">
                     <h3>Undergraduate Research Assistant, National Tsing Hua University</h3>
-                    <p>Feb. 2026 - Present · Power Electronics & IC Design Laboratory</p>
+                    <p>Feb. 2026 - Present · Power Electronics Research Lab</p>
                 </div>
                 <ul>
-                    <li>Conducting research on next-generation gate driver architectures for high-frequency Gallium Nitride (GaN) power electronics.</li>
-                    <li>Investigating isolated power and signal transmission using integrated PCB micro-transformers.</li>
-                    <li>Designing and simulating primary-side and secondary-side analog circuits, including frequency modulators, rectifiers, and protection circuits.</li>
-                    <li>Using Cadence Virtuoso for schematic design, custom layout, and post-layout verification across process corners.</li>
+                    <li>Assisted with schematic design and transistor sizing for isolated gate driver related analog circuit blocks.</li>
+                    <li>Discussed circuit architecture, simulation results, and design trade-offs with professor and senior lab members.</li>
+                    <li>Supported schematic-level verification and iterative circuit debugging using Cadence Virtuoso and HSPICE.</li>
+                    <li>Developed hands-on experience in analog IC design workflow, including circuit planning, sizing, simulation, and layout-aware design considerations.</li>
                 </ul>
             </article>
 
@@ -222,64 +250,24 @@
             </article>
         </section>
 
-        <section id="coursework" class="section">
+        <section id="coursework" class="section page-section" data-page="coursework">
             <h2>Coursework</h2>
             <p class="section-note">Selected coursework related to circuit design, semiconductor fundamentals, programming, and systems. Courses are listed without grades.</p>
             <div class="course-filters" aria-label="Course filters">
                 <button class="course-filter active" type="button" data-filter="all">All Classes</button>
                 <button class="course-filter" type="button" data-filter="analog">Analog</button>
                 <button class="course-filter" type="button" data-filter="digital">Digital</button>
-                <button class="course-filter" type="button" data-filter="power">Power</button>
                 <button class="course-filter" type="button" data-filter="software">Software</button>
                 <button class="course-filter" type="button" data-filter="math">Math</button>
                 <button class="course-filter" type="button" data-filter="lab">Lab</button>
                 <button class="course-filter" type="button" data-filter="science">Science</button>
                 <button class="course-filter" type="button" data-filter="general">General</button>
             </div>
-            <div class="course-grid">
-                <span data-category="software">Introduction to Programming</span>
-                <span data-category="math">Signals and Systems</span>
-                <span data-category="math">Partial Differential Equations and Complex Variables</span>
-                <span data-category="math">Ordinary Differential Equations</span>
-                <span data-category="math">Calculus I</span>
-                <span data-category="math">Calculus II</span>
-                <span data-category="math">Linear Algebra</span>
-                <span data-category="math">Probability</span>
-                <span data-category="analog">Electric Circuits</span>
-                <span data-category="science">Electromagnetism</span>
-                <span data-category="science">Modern Physics</span>
-                <span data-category="science">General Physics B I</span>
-                <span data-category="science">General Physics B II</span>
-                <span data-category="lab">General Physics Laboratory I</span>
-                <span data-category="analog">Electronics I</span>
-                <span data-category="analog">Electronics II</span>
-                <span data-category="analog">Introduction to Integrated Circuit Design</span>
-                <span data-category="analog">Case Study for Analog and RF Designs</span>
-                <span data-category="analog">Introduction to Solid-State Electronic Devices</span>
-                <span data-category="analog">RF IC Design</span>
-                <span data-category="analog">Timing Circuit Designs and Their Applications</span>
-                <span data-category="power">Power Electronics</span>
-                <span data-category="digital">Logic Design</span>
-                <span data-category="digital">Special Topic on Implementation I</span>
-                <span data-category="digital">Special Topic on Implementation II</span>
-                <span data-category="software">Generative AI in the Real World</span>
-                <span data-category="software">Introduction to Machine Learning</span>
-                <span data-category="software">AI Computing Architecture and System I</span>
-                <span data-category="lab">Microelectronics Laboratory</span>
-                <span data-category="lab">Solid-State Electronics Laboratory - Semiconductor Processing</span>
-                <span data-category="lab">Electrical Machinery Laboratory</span>
-                <span data-category="lab">IC Design Laboratory</span>
-                <span data-category="lab">Logic Design Laboratory</span>
-                <span data-category="general">Academic English Writing</span>
-                <span data-category="general">Career Planning and Life</span>
-                <span data-category="general">Mandarin Advanced I</span>
-                <span data-category="general">Malay Basic I</span>
-                <span data-category="general">Bahasa Indonesia Basic I</span>
-                <span data-category="general">Bahasa Indonesia Basic II</span>
-            </div>
+            <div class="course-grid" aria-live="polite"></div>
+            <p class="course-empty" hidden>No courses are currently assigned to this category.</p>
         </section>
 
-        <section id="license" class="section">
+        <section id="license" class="section page-section" data-page="license">
             <h2>License</h2>
             <article class="entry compact">
                 <div class="entry-title">
@@ -295,18 +283,18 @@
             </article>
         </section>
 
-        <section id="resume" class="section resume-section">
+        <section id="resume" class="section resume-section page-section" data-page="resume">
             <div class="section-heading">
                 <h2>Resume</h2>
-                <p>Download the latest PDF resume for applications and interviews.</p>
+                <p>Open or download the latest PDF resume for applications and interviews.</p>
             </div>
-            <a class="download-button" href="Wong_Jiun_Yan_Resume.pdf" download>Download Resume PDF</a>
-            <object class="resume-viewer" data="Wong_Jiun_Yan_Resume.pdf#toolbar=1&navpanes=0" type="application/pdf">
-                <p>Your browser cannot preview the PDF. <a href="Wong_Jiun_Yan_Resume.pdf" download>Download the resume</a>.</p>
-            </object>
+            <div class="resume-actions">
+                <a class="download-button" href="Wong_Jiun_Yan_Resume.pdf" target="_blank" rel="noreferrer">Open Resume PDF</a>
+                <a class="download-button secondary" href="Wong_Jiun_Yan_Resume.pdf" download>Download Resume PDF</a>
+            </div>
         </section>
 
-        <section id="contact" class="section contact-section">
+        <section id="contact" class="section contact-section page-section" data-page="contact">
             <h2>Contact</h2>
             <p>I am currently seeking internship opportunities in Analog IC Design or Power Management Systems.</p>
             <div class="contact-grid">
@@ -331,6 +319,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=20260626-2"></script>
+    <script src="script.js?v=20260627-2"></script>
 </body>
 </html>
