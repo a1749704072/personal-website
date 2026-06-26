@@ -1,98 +1,277 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiun Yan Wong - Personal Website</title>
+    <meta name="description" content="Wong Jiun Yan - Electrical Engineering student focused on Analog and Mixed-Signal IC Design.">
+    <title>Wong Jiun Yan | Analog & Mixed-Signal IC Design</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">JY</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="brand" href="#home">Wong Jiun Yan</a>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#research">Research</a>
+                <a href="#projects">Project</a>
+                <a href="#experience">Work Experience</a>
+                <a href="#coursework">Coursework</a>
+                <a href="#license">License</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm Jiun Yan Wong</h1>
-                <p class="subtitle">Web Developer & Designer</p>
-                <p class="description">Creating beautiful and functional websites</p>
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>I'm a passionate web developer with a love for creating clean, modern websites. With experience in HTML, CSS, and JavaScript, I bring ideas to life on the web.</p>
-                <div class="skills">
-                    <div class="skill-item">HTML/CSS</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">Web Design</div>
-                    <div class="skill-item">Responsive Design</div>
+    <main id="home" class="wrap page">
+        <section class="intro section">
+            <div class="intro-main">
+                <img class="portrait" src="profile-photo.png" alt="Portrait of Wong Jiun Yan">
+                <div class="intro-copy">
+                    <h1>WONG JIUN YAN <span>黃俊彥</span></h1>
+                    <p class="role">Electrical Engineering Student at National Tsing Hua University</p>
+                    <p class="focus">Analog & Mixed-Signal IC Design · Power Management · Custom VLSI Layout</p>
+                    <div class="quick-links" aria-label="Profile links">
+                        <a href="mailto:wongjiunyan@gmail.com">Email</a>
+                        <a href="https://www.linkedin.com/in/wong-jiun-yan" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a href="https://github.com/wong-jiun-yan" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="#resume">Resume</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <h3>Project One</h3>
-                    <p>A beautiful portfolio website built with HTML and CSS</p>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <h3>Project Two</h3>
-                    <p>Interactive web application with JavaScript</p>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <h3>Project Three</h3>
-                    <p>Responsive design showcase</p>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
+            <div class="education-strip" aria-label="Education summary">
+                <article>
+                    <p class="eyebrow">Current</p>
+                    <h2>National Tsing Hua University</h2>
+                    <p>B.S. Electrical Engineering</p>
+                    <p>Hsinchu, Taiwan · 2023 - 2027</p>
+                </article>
+                <article>
+                    <p class="eyebrow">Foundation</p>
+                    <h2>Tsun Jin High School</h2>
+                    <p>Science Stream</p>
+                    <p>Kuala Lumpur, Malaysia · 2017 - 2022</p>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Feel free to reach out to me through any of the following channels</p>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-link">Email</a>
-                <a href="https://github.com/wong-jiun-yan" class="contact-link">GitHub</a>
-                <a href="https://linkedin.com" class="contact-link">LinkedIn</a>
-                <a href="https://twitter.com" class="contact-link">Twitter</a>
+        <section id="about" class="section about-grid">
+            <div>
+                <h2>About</h2>
+                <p>
+                    I am an Electrical Engineering student at National Tsing Hua University with a strong focus on Integrated Circuit design.
+                    My work centers on custom analog topologies, from HSPICE multi-corner simulation to physical implementation using Cadence Virtuoso,
+                    Synopsys Laker Layout, and Calibre DRC/LVS verification.
+                </p>
+                <p>
+                    I am currently seeking internship opportunities in Analog IC Design or Power Management Systems. I enjoy turning device-level
+                    fundamentals into simulated, verified, and layout-aware circuit implementations.
+                </p>
             </div>
-        </div>
-    </section>
+            <div class="skill-panel">
+                <h3>Technical Focus</h3>
+                <ul class="tag-list">
+                    <li>Analog IC Design</li>
+                    <li>Mixed-Signal Circuits</li>
+                    <li>Power Management</li>
+                    <li>HSPICE</li>
+                    <li>Cadence Virtuoso</li>
+                    <li>Synopsys Laker</li>
+                    <li>Calibre DRC/LVS</li>
+                    <li>Verilog</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <section class="section metrics" aria-labelledby="metrics-title">
+            <div class="section-heading">
+                <h2 id="metrics-title">Selected Simulation Results</h2>
+                <p>Specific performance benchmarks verified through HSPICE simulation and layout-aware design work.</p>
+            </div>
+            <div class="metric-grid">
+                <article>
+                    <span>ROM Operating Frequency</span>
+                    <strong>136 <small>MHz</small></strong>
+                    <p>Stable under 128 x 16 memory array simulation.</p>
+                </article>
+                <article>
+                    <span>Op-Amp Open-Loop Gain</span>
+                    <strong>60 <small>dB</small></strong>
+                    <p>Two-stage CMOS amplifier configuration.</p>
+                </article>
+                <article>
+                    <span>Op-Amp Phase Margin</span>
+                    <strong>86<small>deg</small></strong>
+                    <p>Designed for strong closed-loop stability.</p>
+                </article>
+                <article>
+                    <span>Unity-Gain Bandwidth</span>
+                    <strong>10.68 <small>MHz</small></strong>
+                    <p>Post-compensation simulation result.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <h2>Research</h2>
+            <article class="entry">
+                <div class="entry-title">
+                    <h3>Isolated Gate Driver Circuit for High-Frequency GaN Power Systems</h3>
+                    <p>Feb. 2026 - Present · Hsinchu, Taiwan</p>
+                </div>
+                <ul>
+                    <li>Undergraduate Research Assistant at NTHU Power Electronics & IC Design Laboratory.</li>
+                    <li>Developing isolated gate driver architectures for high-frequency GaN switching systems to improve reliability and efficiency.</li>
+                    <li>Designing primary-side and secondary-side analog blocks, including modulation, rectifier, and protection circuits in Cadence Virtuoso.</li>
+                    <li>Investigating signal and power transfer through micro-transformer structures for galvanic isolation.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Project</h2>
+            <article class="entry">
+                <div class="entry-title">
+                    <h3>128 x 16 Read-Only Memory (ROM) Macro Design & Layout</h3>
+                    <p>Sep. 2025 - Jan. 2026</p>
+                </div>
+                <ul>
+                    <li>Completed a full custom ROM design flow including 7-to-128 decoder, row driver, and memory cell array.</li>
+                    <li>Achieved reliable 136 MHz operation through HSPICE transient simulation.</li>
+                    <li>Drew full layouts in Synopsys Laker, passed Calibre DRC/LVS, and verified performance through post-layout simulation.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-title">
+                    <h3>Two-Stage CMOS Operational Amplifier with Miller Compensation</h3>
+                    <p>Sep. 2025 - Dec. 2025</p>
+                </div>
+                <ul>
+                    <li>Designed a two-stage op-amp with PMOS differential input pair, active load, and Miller compensation.</li>
+                    <li>Achieved 60 dB DC gain, 10.68 MHz unity-gain bandwidth, and 86 degree phase margin under HSPICE simulation.</li>
+                    <li>Optimized transistor sizing and bias conditions for stable closed-loop behavior.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-title">
+                    <h3>NTHU COPILOT: Agent-Based Course Planning Assistant</h3>
+                    <p>Mar. 2026 - May 2026</p>
+                </div>
+                <ul>
+                    <li>Built an interactive AI planner using Python and Streamlit.</li>
+                    <li>Integrated LLM workflows with deterministic validation to reduce hallucinated schedules and graduation-rule errors.</li>
+                    <li>Generated optimized, conflict-free course plans from natural-language prompts.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Work Experience</h2>
+            <article class="entry">
+                <div class="entry-title">
+                    <h3>Student Assistant Roles, National Tsing Hua University</h3>
+                    <p>Jan. 2024 - Present · Office of Global Affairs, Cashier Office, Animal Facility</p>
+                </div>
+                <ul>
+                    <li>Supported administrative workflows requiring accurate data entry and careful handling of confidential documents.</li>
+                    <li>Assisted office operations across global affairs, cashier services, and laboratory resource environments.</li>
+                    <li>Built habits in precision, documentation, and cross-functional communication.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-title">
+                    <h3>NTHU Student Associations</h3>
+                    <p>Sep. 2024 - Apr. 2025 · IT Officer, Malaysian Student Association, OCSA</p>
+                </div>
+                <ul>
+                    <li>Maintained association digital platforms and supported event communication.</li>
+                    <li>Coordinated logistics and improved hand-off clarity across student teams.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="coursework" class="section">
+            <h2>Coursework</h2>
+            <p class="section-note">Selected coursework related to circuit design, semiconductor fundamentals, programming, and systems.</p>
+            <div class="course-filters" aria-label="Course filters">
+                <button class="course-filter active" type="button" data-filter="all">All Classes</button>
+                <button class="course-filter" type="button" data-filter="analog">Analog</button>
+                <button class="course-filter" type="button" data-filter="digital">Digital</button>
+                <button class="course-filter" type="button" data-filter="power">Power</button>
+                <button class="course-filter" type="button" data-filter="software">Software</button>
+                <button class="course-filter" type="button" data-filter="math">Math</button>
+            </div>
+            <div class="course-grid">
+                <span data-category="analog">Microelectronics I</span>
+                <span data-category="analog">Microelectronics II</span>
+                <span data-category="analog">Microelectronics III</span>
+                <span data-category="analog">Analog Integrated Circuit Design</span>
+                <span data-category="digital">Introduction to VLSI</span>
+                <span data-category="power">Power Electronics</span>
+                <span data-category="digital">Logic Design</span>
+                <span data-category="digital">Verilog HDL Design</span>
+                <span data-category="software">Python Programming</span>
+                <span data-category="software">Streamlit Application Development</span>
+                <span data-category="math">Signals and Systems</span>
+                <span data-category="math">Circuit Theory</span>
+            </div>
+        </section>
+
+        <section id="license" class="section">
+            <h2>License</h2>
+            <article class="entry compact">
+                <div class="entry-title">
+                    <h3>Verilog HDL Design Certification</h3>
+                    <p>Digital design and HDL fundamentals</p>
+                </div>
+            </article>
+            <article class="entry compact">
+                <div class="entry-title">
+                    <h3>Career Soft Skills Workshop</h3>
+                    <p>National Tsing Hua University</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="resume" class="section resume-section">
+            <div class="section-heading">
+                <h2>Resume</h2>
+                <p>Download the latest PDF resume for applications and interviews.</p>
+            </div>
+            <a class="download-button" href="Wong_Jiun_Yan_Resume.pdf" download>Download Resume PDF</a>
+            <object class="resume-viewer" data="Wong_Jiun_Yan_Resume.pdf#toolbar=1&navpanes=0" type="application/pdf">
+                <p>Your browser cannot preview the PDF. <a href="Wong_Jiun_Yan_Resume.pdf" download>Download the resume</a>.</p>
+            </object>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <h2>Contact</h2>
+            <p>I am currently seeking internship opportunities in Analog IC Design or Power Management Systems.</p>
+            <div class="contact-grid">
+                <a href="mailto:wongjiunyan@gmail.com">
+                    <span>Email</span>
+                    wongjiunyan@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/wong-jiun-yan" target="_blank" rel="noreferrer">
+                    <span>LinkedIn</span>
+                    linkedin.com/in/wong-jiun-yan
+                </a>
+            </div>
+            <blockquote>
+                I enjoy turning fundamentals into working, verifiable implementations, connecting how transistors behave to how complex circuits perform and how layouts pass sign-off.
+            </blockquote>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Jiun Yan Wong. All rights reserved.</p>
+        <div class="wrap">
+            <p>© 2026 Wong Jiun Yan. Built for GitHub Pages.</p>
         </div>
     </footer>
 

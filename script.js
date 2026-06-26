@@ -1,37 +1,54 @@
-// ===== Smooth Scrolling ===== 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+const nav = document.querySelector(".site-nav");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelectorAll(".site-nav a");
+
+if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+}
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        nav?.classList.remove("open");
+        menuToggle?.setAttribute("aria-expanded", "false");
     });
 });
 
-// ===== Active Navigation Link ===== 
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
+const sections = [...document.querySelectorAll("main section[id]")];
+
+function updateActiveNav() {
+    const offset = window.scrollY + 120;
+    let activeId = sections[0]?.id;
+
+    sections.forEach((section) => {
+        if (section.offsetTop <= offset) {
+            activeId = section.id;
         }
     });
-    
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
+
+    navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
+    });
+}
+
+window.addEventListener("scroll", updateActiveNav, { passive: true });
+updateActiveNav();
+
+const filterButtons = document.querySelectorAll(".course-filter");
+const courses = document.querySelectorAll(".course-grid span");
+
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+
+        courses.forEach((course) => {
+            const shouldShow = filter === "all" || course.dataset.category === filter;
+            course.classList.toggle("hidden", !shouldShow);
+        });
     });
 });
-
-// ===== Form Handling (if you add a contact form later) ===== 
-console.log('Personal website loaded successfully!');
