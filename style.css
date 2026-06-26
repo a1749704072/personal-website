@@ -213,9 +213,10 @@ a:focus {
 
 .education-strip {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 18px;
     margin-top: 22px;
+    max-width: 520px;
 }
 
 .education-strip article,
@@ -377,20 +378,20 @@ a:focus {
 
 .course-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 6px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
 }
 
 .course-grid span {
     display: flex;
-    min-height: 43px;
+    min-height: 48px;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 8px;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 9px 11px;
     background: var(--navy-soft);
     color: var(--white);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
 }
 
